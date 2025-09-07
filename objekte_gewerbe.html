@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schreinerei Lang - Objekte Gewerbe</title>
+<meta name="description" content="Referenzen für Gewerbeobjekte – Innenausbau, Möbel und Interieur von Schreinerei Lang.">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- GLightbox CSS -->
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
+<link rel="icon" href="img/logo-favicon.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/logo-favicon.png">
+
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+  padding-top: 80px;
+  padding-bottom: 80px; /* Höhe des Footers */
+}
+
+.navbar {
+  background-color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  padding:1rem 2rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  font-weight: 601;
+  color: #222 !important;
+  transition: color 0.3s, transform 0.3s;
+}
+.navbar-nav .nav-link:hover {
+  color: #b58846 !important;
+  transform: scale(1.05);
+}
+
+.navbar-nav .nav-link.active {
+  color: #b58846 !important;   /* Gold */
+  font-weight: 600;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease; /* sanfte Animation */
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1); /* 10% größer beim Hover */
+}
+.navbar-brand img {
+  transition: transform 0.3s ease; /* sanfte Animation */
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1); /* 10% größer beim Hover */
+}
+
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem 3rem 1rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero p.first {
+  margin-bottom: 2rem; /* nur nach dem ersten Absatz Abstand */
+}
+
+
+/* Portfolio Grid */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Immer 4 Spalten */
+  gap: 15px;
+}
+
+.portfolio img {
+  width: 100%;        /* Bild füllt die Spalte aus */
+  height: auto;       /* Höhe passt sich proportional an */
+  object-fit: contain; /* Bild bleibt vollständig sichtbar */
+  border-radius: 12px;
+}
+.portfolio img.tall {
+  grid-row: span 2; /* das erste Bild doppelt so hoch */
+}
+
+.portfolio a img {
+  transition: transform 0.3s ease;
+}
+.portfolio a:hover img {
+  transform: scale(1.05);
+}
+
+
+/* Projekt Titel */
+.project-title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #b58846;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #b58846;
+  z-index: 1000;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+@media(max-width:768px){
+  .hero h1 { font-size:2.8rem; }
+  .hero p { font-size:1.1rem; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="Rainer Lang Logo" height="75">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">        
+	<li class="nav-item"><a class="nav-link" href="leistungen.html">Leistungen</a></li>
+        <li class="nav-item"><a class="nav-link active" href="objekte_gewerbe.html">Objekte Gewerbe</a></li>
+        <li class="nav-item"><a class="nav-link" href="ausbau_privat.html">Ausbau Privat</a></li>
+        <li class="nav-item"><a class="nav-link" href="interieur_zuhause.html">Interieur Zuhause</a></li>
+        <li class="nav-item"><a class="nav-link" href="ueber_uns.html">Über uns</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<section class="hero">
+  <h1>Objekte Gewerbe</h1>
+  <p class="first">Stilsichere Gestaltung & solides Handwerk für Hotels, Bäckereien, Imbisse und Büros.</p>
+  <p>Ein spannendes Thema ist die Kombination traditioneller Verarbeitungstechniken mit modernem Design.</p>
+  <p>Aus diesem Mix heraus entstehen aus heimischen Hölzern moderne Möbel höchster Qualität mit nachhaltigem Design.</p>
+</section>
+
+<div class="container">
+
+  <div class="project-title">Hotelausbau</div>
+  <div class="portfolio">
+    <a href="img/img_objekte_gewerbe/img_ausbau_hotel_bh_rezeption-1.jpg" class="glightbox" data-gallery="hotelausbau"><img src="img/img_objekte_gewerbe/img_ausbau_hotel_bh_rezeption-1.jpg" alt="Hotel Rezeption"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_hotel_bh_zimmer-1.jpg" class="glightbox" data-gallery="hotelausbau"><img src="img/img_objekte_gewerbe/img_ausbau_hotel_bh_zimmer-1.jpg" alt="Hotel Zimmer 1"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_hotel_bh_zimmer-2.jpg" class="glightbox" data-gallery="hotelausbau"><img src="img/img_objekte_gewerbe/img_ausbau_hotel_bh_zimmer-2.jpg" alt="Hotel Zimmer 2"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_hotel_bh_zimmer-3.jpg" class="glightbox" data-gallery="hotelausbau"><img src="img/img_objekte_gewerbe/img_ausbau_hotel_bh_zimmer-3.jpg" alt="Hotel Zimmer 3"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_hotel_bh_festsaal.jpg" class="glightbox" data-gallery="hotelausbau"><img src="img/img_objekte_gewerbe/img_ausbau_hotel_bh_festsaal.jpg" alt="Festsaal"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_hotel_bh_bad.jpg" class="glightbox" data-gallery="hotelausbau"><img src="img/img_objekte_gewerbe/img_ausbau_hotel_bh_bad.jpg" alt="Hotel Bad"></a>
+  </div>
+
+  <div class="project-title">Fleischerei mit Imbiss</div>
+  <div class="portfolio">
+    <a href="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_5.jpg" class="glightbox" data-gallery="fleischerei"><img src="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_5.jpg" alt="Sitzecke" class="tall"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_4.jpg" class="glightbox" data-gallery="fleischerei"><img src="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_4.jpg" alt="Sitzbereich"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_0.jpg" class="glightbox" data-gallery="fleischerei"><img src="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_0.jpg" alt="Eingangsbereich"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_3.jpg" class="glightbox" data-gallery="fleischerei"><img src="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_3.jpg" alt="Eingang 2"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_1.jpg" class="glightbox" data-gallery="fleischerei"><img src="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_1.jpg" alt="Theke"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_6.jpg" class="glightbox" data-gallery="fleischerei"><img src="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_6.jpg" alt="Lounge"></a>
+  </div>
+
+  <div class="project-title">Berufsschule</div>
+  <div class="portfolio">
+    <a href="img/img_objekte_gewerbe/img_ausbau_bsw_3.jpg" class="glightbox" data-gallery="berufsschule"><img src="img/img_objekte_gewerbe/img_ausbau_bsw_3.jpg" alt="Wartebereich"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_bsw_sitzecke.jpg" class="glightbox" data-gallery="berufsschule"><img src="img/img_objekte_gewerbe/img_ausbau_bsw_sitzecke.jpg" alt="Sitzecke"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_bsw_bilderwand.jpg" class="glightbox" data-gallery="berufsschule"><img src="img/img_objekte_gewerbe/img_ausbau_bsw_bilderwand.jpg" alt="Bilderwand"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_bsw_1.jpg" class="glightbox" data-gallery="berufsschule"><img src="img/img_objekte_gewerbe/img_ausbau_bsw_1.jpg" alt="Stempelschrank geschlossen"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_bsw_2.jpg" class="glightbox" data-gallery="berufsschule"><img src="img/img_objekte_gewerbe/img_ausbau_bsw_2.jpg" alt="Stempelschrank offen"></a>
+  </div>
+
+  <div class="project-title">Adlon Berlin</div>
+  <div class="portfolio">
+    <a href="img/img_objekte_gewerbe/img_ausbau_adlon_2.jpg" class="glightbox" data-gallery="adlon"><img src="img/img_objekte_gewerbe/img_ausbau_adlon_2.jpg" alt="Adlon 2"></a>
+    <a href="img/img_objekte_gewerbe/img_ausbau_adlon_3.jpg" class="glightbox" data-gallery="adlon"><img src="img/img_objekte_gewerbe/img_ausbau_adlon_3.jpg" alt="Adlon 3"></a>
+  </div>
+
+  <div class="project-title">Ladenausbau</div>
+  <div class="portfolio">
+    <a href="img/img_objekte_gewerbe/img_ladenausbau.jpg" class="glightbox" data-gallery="ladenausbau"><img src="img/img_objekte_gewerbe/img_ladenausbau.jpg" alt="Ladenausbau"></a>
+  </div>
+
+  <div class="project-title">Wartebereich</div>
+  <div class="portfolio">
+    <a href="img/img_objekte_gewerbe/img_wartebereiche.jpg" class="glightbox" data-gallery="wartebereich"><img src="img/img_objekte_gewerbe/img_wartebereiche.jpg" alt="Wartebereich"></a>
+  </div>
+
+  <div class="project-title">Bäckerei</div>
+  <div class="portfolio">
+    <a href="img/img_objekte_gewerbe/img_theken_2.jpg" class="glightbox" data-gallery="baeckerei"><img src="img/img_objekte_gewerbe/img_theken_2.jpg" alt="Bäckerei Theke"></a>
+  </div>
+
+</div>
+
+<footer>
+  <span>&copy; 2025 Schreinerei Lang</span> | 
+  <a href="impressum.html">Impressum</a> | 
+  <a href="datenschutz.html">Datenschutz</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+
+
+</body>
+</html>

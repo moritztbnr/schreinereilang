@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schreinerei Lang - Ausbau Privat</title>
+<meta name="description" content="Individuelle Wohnraumgestaltung – Innenausbau, Möbel und Interieur.">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- GLightbox CSS -->
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
+<link rel="icon" href="img/logo-favicon.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/logo-favicon.png">
+
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+  padding-top: 80px;
+  padding-bottom: 80px; /* Höhe des Footers */
+}
+
+.navbar {
+  background-color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  padding:1rem 2rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  font-weight: 601;
+  color: #222 !important;
+  transition: color 0.3s, transform 0.3s;
+}
+.navbar-nav .nav-link:hover {
+  color: #b58846 !important;
+  transform: scale(1.05);
+}
+.navbar-nav .nav-link.active {
+  color: #b58846 !important;
+  font-weight: 600;
+}
+.navbar-brand img {
+  transition: transform 0.3s ease; /* sanfte Animation */
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1); /* 10% größer beim Hover */
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem 3rem 1rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 1200px;
+  margin: auto;
+}
+.hero p.first {
+  margin-bottom: 2rem;
+}
+
+/* Portfolio Grid */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.portfolio img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio img.tall {
+  grid-row: span 2;
+}
+.portfolio a:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Projekt Titel */
+.project-title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #b58846;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #b58846;
+  z-index: 1000;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+footer a:hover {
+  color: #222;
+}
+
+@media(max-width:768px){
+  .hero h1 { font-size:2.8rem; }
+  .hero p { font-size:1.1rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="Rainer Lang Logo" height="75">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">        
+        <li class="nav-item"><a class="nav-link" href="leistungen.html">Leistungen</a></li>
+        <li class="nav-item"><a class="nav-link" href="objekte_gewerbe.html">Objekte Gewerbe</a></li>
+        <li class="nav-item"><a class="nav-link active" href="ausbau_privat.html">Ausbau Privat</a></li>
+        <li class="nav-item"><a class="nav-link" href="interieur_zuhause.html">Interieur Zuhause</a></li>
+        <li class="nav-item"><a class="nav-link" href="ueber_uns.html">Über uns</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Ausbau Privat</h1>
+  <p class="first">Individuelle Gestaltung & präzises Handwerk für Ihr Zuhause.</p>
+  <p class="hero-spacing">Wie sitzt die perfekte Einrichtung? Welcher Kontrast unterstreicht welche Form und erzeugt dabei Spannung?</p>
+  <p>Ich plane maßgeschneiderte Einrichtungslösungen nach Ihren Wünschen - gerne auch für Ihr komplettes Wohnumfeld.</p>
+</section>
+
+<div class="container">
+
+  <div class="project-title">Klare Linien</div>
+  <div class="portfolio">
+    <a href="img/img_ausbau_privat/img_wander_kueche_4.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_kueche_4.jpg" alt="Küche 4"></a>
+    <a href="img/img_ausbau_privat/img_wander_kueche.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_kueche.jpg" alt="Küche"></a>
+    <a href="img/img_ausbau_privat/img_wander_kueche_2.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_kueche_2.jpg" alt="Küche 2"></a>
+    <a href="img/img_ausbau_privat/img_wander_bad.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_bad.jpg" alt="Bad"></a>
+    <a href="img/img_ausbau_privat/img_wander_esstisch.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_esstisch.jpg" alt="Esstisch"></a>
+    <a href="img/img_ausbau_privat/img_wander_regalwand.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_regalwand.jpg" alt="Regalwand"></a>
+  </div>
+
+  <div class="project-title">Eleganz in Holz</div>
+  <div class="portfolio">
+    <a href="img/img_ausbau_privat/img_ausbau_2017_esstisch.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_esstisch.jpg" alt="Esstisch"></a>
+    <a href="img/img_ausbau_privat/img_ausbau_2017_kueche_2.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_kueche_2.jpg" alt="Küche 2"></a>
+    <a href="img/img_ausbau_privat/img_ausbau_2017_tv-ecke.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_tv-ecke.jpg" alt="TV Ecke"></a>
+    <a href="img/img_ausbau_privat/img_ausbau_2017_wintergarten.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_wintergarten.jpg" alt="Wintergarten"></a>
+    <a href="img/img_ausbau_privat/img_ausbau_2017_schlafzimmer.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_schlafzimmer.jpg" alt="Schlafzimmer"></a>
+    <a href="img/img_ausbau_privat/img_ausbau_2017_bad.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_bad.jpg" alt="Bad"></a>
+    <a href="img/img_ausbau_privat/img_ausbau_2017_schrank.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_schrank.jpg" alt="Schrank"></a>
+  </div>
+
+  <div class="project-title">Maßgeschneiderte Raumlösungen</div>
+  <div class="portfolio">
+    <a href="img/img_ausbau_privat/img_gronau_kueche_3.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_3.jpg" alt="Küche 3"></a>
+    <a href="img/img_ausbau_privat/img_gronau_kueche_2.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_2.jpg" alt="Küche 2"></a>
+    <a href="img/img_ausbau_privat/img_gronau_treppe_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_1.jpg" alt="Treppe 1"></a>
+    <a href="img/img_ausbau_privat/img_gronau_treppe_2.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_2.jpg" alt="Treppe 2"></a>
+    <a href="img/img_ausbau_privat/img_gronau_tuer_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_tuer_1.jpg" alt="Tür 1"></a>
+    <a href="img/img_ausbau_privat/img_gronau_kueche_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_1.jpg" alt="Küche 1"></a>
+    <a href="img/img_ausbau_privat/img_gronau_treppe_kueche.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_kueche.jpg" alt="Treppe Küche"></a>
+  </div>
+
+  <div class="project-title">Brüderchen & Schwesterchen</div>
+  <div class="portfolio">
+    <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_2.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_2.jpg" alt="Kinderzimmer 2"></a>
+    <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_3.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_3.jpg" alt="Kinderzimmer 3"></a>
+    <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_0.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_0.jpg" alt="Kinderzimmer 0"></a>
+    <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_1.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_1.jpg" alt="Kinderzimmer 1"></a>
+  </div>
+
+  <div class="project-title">Schöner Arbeiten</div>
+  <div class="portfolio">
+    <a href="img/img_ausbau_privat/img_arbeiten_sitzecke_560px.jpg" class="glightbox" data-gallery="schoener-arbeiten"><img src="img/img_ausbau_privat/img_arbeiten_sitzecke_560px.jpg" alt="Sitzecke"></a>
+    <a href="img/img_ausbau_privat/img_arbeiten_regalsystem_560px.jpg" class="glightbox" data-gallery="schoener-arbeiten"><img src="img/img_ausbau_privat/img_arbeiten_regalsystem_560px.jpg" alt="Regalsystem"></a>
+  </div>
+
+</div>
+
+<footer>
+  <span>&copy; 2025 Schreinerei Lang</span> | 
+  <a href="impressum.html">Impressum</a> | 
+  <a href="datenschutz.html">Datenschutz</a>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+
+</body>
+</html>

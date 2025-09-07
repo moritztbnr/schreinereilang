@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schreinerei Lang - Kontakt</title>
+<meta name="description" content="Kontaktieren Sie Schreinerei Lang – Innenarchitekt & Schreinermeister. Adresse, Telefonnummer, E-Mail und Kontaktformular.">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="icon" href="img/logo-favicon.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/logo-favicon.png">
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+  padding-top: 80px;
+  padding-bottom: 80px; /* Höhe des Footers */
+}
+
+.navbar {
+  background-color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  padding:1rem 2rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  font-weight: 601;
+  color: #222 !important;
+  transition: color 0.3s, transform 0.3s;
+}
+.navbar-nav .nav-link:hover {
+  color: #b58846 !important;
+  transform: scale(1.05);
+}
+
+.navbar-nav .nav-link.active {
+  color: #b58846 !important;   /* Gold */
+  font-weight: 600;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease; /* sanfte Animation */
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1); /* 10% größer beim Hover */
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem 3rem 1rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem; /* nur nach dem ersten Absatz Abstand */
+
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Info Cards */
+.info-section {
+  padding: 2rem;
+}
+.info-card {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  color: #222;
+  transition: transform 0.3s;
+}
+.info-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.info-card a {
+  color: #222;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+.info-card a:hover {
+  color: #b58846;
+  transform: scale(1.05);
+}
+
+.info-card h4 {
+  margin-bottom: 1.5rem; /* mehr Abstand zur ersten Zeile */
+}
+
+/* Buttons */
+.btn-gold {
+  background-color: #b58846;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn-gold:hover {
+  background-color: #a17638;
+  transform: scale(1.05);
+}
+
+/* Form */
+form .form-control {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+form .btn-gold {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #b58846;
+  z-index: 1000;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+@media(max-width:768px){
+  .hero h1 { font-size:2.8rem; }
+  .hero p { font-size:1.1rem; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="Rainer Lang Logo" height="75">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">        
+        <li class="nav-item"><a class="nav-link" href="leistungen.html">Leistungen</a></li>
+        <li class="nav-item"><a class="nav-link" href="objekte_gewerbe.html">Objekte Gewerbe</a></li>
+        <li class="nav-item"><a class="nav-link" href="ausbau_privat.html">Ausbau Privat</a></li>
+        <li class="nav-item"><a class="nav-link" href="interieur_zuhause.html">Interieur Zuhause</a></li>
+        <li class="nav-item"><a class="nav-link" href="ueber_uns.html">Über uns</a></li>
+        <li class="nav-item"><a class="nav-link active" href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<section class="hero">
+  <h1>Kontakt</h1>
+  <p>Wir freuen uns auf Ihre Nachricht oder Ihren Besuch.</p>
+</section>
+
+<section class="container my-5">
+  <div class="row g-4  justify-content-center">
+    <div class="col-md-7">
+      <div class="info-card h-100">
+        <h4>Schreinerei Lang</h4>
+        <p>Innenarchitektur & Schreinerkunst</p>
+        <p><a href="https://maps.app.goo.gl/mFAcPZpkgbZByASS9"target="_blank">Zwickauer Straße 31, 08485 Lengenfeld</a></p>
+        <p><a href="tel:0376063136">Tel: 037606 3136</a></p>
+        <p><a href="mailto:info@schreinerei-lang.de">info@schreinerei-lang.de</a></p>
+        <p><a href="https://www.instagram.com/rainer_lang/"><img src="img/img_kontakt/instagram.png" width="125" alt="Instagram"></a></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2533.8080947919307!2d12.370667976956513!3d50.57493187839261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0d6cd2b1abd03%3A0x3ae0814af4a6456!2srainer%20lang%2C%20innenarchitekt%20%26%20schreinerei!5e0!3m2!1sde!2sus!4v1757111488193!5m2!1sde!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>    
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="info-card h-100">
+        <h4>Nachricht senden</h4>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Ihr Name" class="form-control" required>
+          <input type="email" name="email" placeholder="Ihre E-Mail" class="form-control" required>
+          <input type="text" name="betreff" placeholder="Betreff" class="form-control">
+          <textarea name="nachricht" placeholder="Ihre Nachricht" class="form-control" rows="6" required></textarea>
+          <button type="submit" class="btn btn-gold mt-2">Nachricht senden</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; 2025 Schreinerei Lang</span> | 
+  <a href="impressum.html">Impressum</a> | 
+  <a href="datenschutz.html">Datenschutz</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
