@@ -18,16 +18,29 @@
 <link rel="icon" href="img/logo-favicon.png" type="image/png">
 <link rel="apple-touch-icon" sizes="180x180" href="img/logo-favicon.png">
 
-
 <style>
-body {
+/* Flexbox Layout für Footer */
+html, body {
+  height: 100%;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   font-family: 'Inter', sans-serif;
-  background-color: #f8f8f8;
+  background-color: #fdfcf9;
   color: #222;
-  padding-top: 80px;
-  padding-bottom: 80px; /* Höhe des Footers */
 }
 
+body {
+  padding-top: 80px; /* Navbar Höhe */
+}
+
+main {
+  flex: 1; /* Hauptinhalt füllt den verfügbaren Platz */
+}
+
+/* Navbar */
 .navbar {
   background-color: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
@@ -49,11 +62,10 @@ body {
   font-weight: 600;
 }
 .navbar-brand img {
-  transition: transform 0.3s ease; /* sanfte Animation */
+  transition: transform 0.3s ease;
 }
-
 .navbar-brand img:hover {
-  transform: scale(1.1); /* 10% größer beim Hover */
+  transform: scale(1.1);
 }
 
 /* Hero */
@@ -101,23 +113,17 @@ body {
 .project-title {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.5rem;
-  color: #b58846;
 }
 
 /* Footer */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
   color: #fff;
   background-color: #b58846;
-  z-index: 1000;
 }
 footer a {
   color: #fff;
@@ -131,6 +137,9 @@ footer a:hover {
 @media(max-width:768px){
   .hero h1 { font-size:2.8rem; }
   .hero p { font-size:1.1rem; }
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>
 </head>
@@ -159,62 +168,64 @@ footer a:hover {
   </div>
 </nav>
 
-<section class="hero">
-  <h1>Ausbau Privat</h1>
-  <p class="first">Individuelle Gestaltung & präzises Handwerk für Ihr Zuhause.</p>
-  <p class="hero-spacing">Wie sitzt die perfekte Einrichtung? Welcher Kontrast unterstreicht welche Form und erzeugt dabei Spannung?</p>
-  <p>Ich plane maßgeschneiderte Einrichtungslösungen nach Ihren Wünschen - gerne auch für Ihr komplettes Wohnumfeld.</p>
-</section>
+<main>
+  <section class="hero">
+    <h1>Ausbau Privat</h1>
+    <p class="first">Individuelle Gestaltung & präzises Handwerk für Ihr Zuhause.</p>
+    <p class="hero-spacing">Wie sitzt die perfekte Einrichtung? Welcher Kontrast unterstreicht welche Form und erzeugt dabei Spannung?</p>
+    <p>Ich plane maßgeschneiderte Einrichtungslösungen nach Ihren Wünschen - gerne auch für Ihr komplettes Wohnumfeld.</p>
+  </section>
 
-<div class="container">
+  <div class="container">
 
-  <div class="project-title">Klare Linien</div>
-  <div class="portfolio">
-    <a href="img/img_ausbau_privat/img_wander_kueche_4.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_kueche_4.jpg" alt="Küche 4"></a>
-    <a href="img/img_ausbau_privat/img_wander_kueche.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_kueche.jpg" alt="Küche"></a>
-    <a href="img/img_ausbau_privat/img_wander_kueche_2.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_kueche_2.jpg" alt="Küche 2"></a>
-    <a href="img/img_ausbau_privat/img_wander_bad.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_bad.jpg" alt="Bad"></a>
-    <a href="img/img_ausbau_privat/img_wander_esstisch.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_esstisch.jpg" alt="Esstisch"></a>
-    <a href="img/img_ausbau_privat/img_wander_regalwand.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_regalwand.jpg" alt="Regalwand"></a>
+    <div class="project-title">Klare Linien</div>
+    <div class="portfolio">
+      <a href="img/img_ausbau_privat/img_wander_kueche_4.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_kueche_4.jpg" alt="Küche 4"></a>
+      <a href="img/img_ausbau_privat/img_wander_kueche.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_kueche.jpg" alt="Küche"></a>
+      <a href="img/img_ausbau_privat/img_wander_kueche_2.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_kueche_2.jpg" alt="Küche 2"></a>
+      <a href="img/img_ausbau_privat/img_wander_bad.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_bad.jpg" alt="Bad"></a>
+      <a href="img/img_ausbau_privat/img_wander_esstisch.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_esstisch.jpg" alt="Esstisch"></a>
+      <a href="img/img_ausbau_privat/img_wander_regalwand.jpg" class="glightbox" data-gallery="klare-linien"><img src="img/img_ausbau_privat/img_wander_regalwand.jpg" alt="Regalwand"></a>
+    </div>
+
+    <div class="project-title">Eleganz in Holz</div>
+    <div class="portfolio">
+      <a href="img/img_ausbau_privat/img_ausbau_2017_esstisch.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_esstisch.jpg" alt="Esstisch"></a>
+      <a href="img/img_ausbau_privat/img_ausbau_2017_kueche_2.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_kueche_2.jpg" alt="Küche 2"></a>
+      <a href="img/img_ausbau_privat/img_ausbau_2017_tv-ecke.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_tv-ecke.jpg" alt="TV Ecke"></a>
+      <a href="img/img_ausbau_privat/img_ausbau_2017_wintergarten.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_wintergarten.jpg" alt="Wintergarten"></a>
+      <a href="img/img_ausbau_privat/img_ausbau_2017_schlafzimmer.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_schlafzimmer.jpg" alt="Schlafzimmer"></a>
+      <a href="img/img_ausbau_privat/img_ausbau_2017_bad.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_bad.jpg" alt="Bad"></a>
+      <a href="img/img_ausbau_privat/img_ausbau_2017_schrank.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_schrank.jpg" alt="Schrank"></a>
+    </div>
+
+    <div class="project-title">Maßgeschneiderte Raumlösungen</div>
+    <div class="portfolio">
+      <a href="img/img_ausbau_privat/img_gronau_kueche_3.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_3.jpg" alt="Küche 3"></a>
+      <a href="img/img_ausbau_privat/img_gronau_kueche_2.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_2.jpg" alt="Küche 2"></a>
+      <a href="img/img_ausbau_privat/img_gronau_treppe_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_1.jpg" alt="Treppe 1"></a>
+      <a href="img/img_ausbau_privat/img_gronau_treppe_2.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_2.jpg" alt="Treppe 2"></a>
+      <a href="img/img_ausbau_privat/img_gronau_tuer_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_tuer_1.jpg" alt="Tür 1"></a>
+      <a href="img/img_ausbau_privat/img_gronau_kueche_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_1.jpg" alt="Küche 1"></a>
+      <a href="img/img_ausbau_privat/img_gronau_treppe_kueche.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_kueche.jpg" alt="Treppe Küche"></a>
+    </div>
+
+    <div class="project-title">Brüderchen & Schwesterchen</div>
+    <div class="portfolio">
+      <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_2.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_2.jpg" alt="Kinderzimmer 2"></a>
+      <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_3.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_3.jpg" alt="Kinderzimmer 3"></a>
+      <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_0.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_0.jpg" alt="Kinderzimmer 0"></a>
+      <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_1.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_1.jpg" alt="Kinderzimmer 1"></a>
+    </div>
+
+    <div class="project-title">Schöner Arbeiten</div>
+    <div class="portfolio">
+      <a href="img/img_ausbau_privat/img_arbeiten_sitzecke_560px.jpg" class="glightbox" data-gallery="schoener-arbeiten"><img src="img/img_ausbau_privat/img_arbeiten_sitzecke_560px.jpg" alt="Sitzecke"></a>
+      <a href="img/img_ausbau_privat/img_arbeiten_regalsystem_560px.jpg" class="glightbox" data-gallery="schoener-arbeiten"><img src="img/img_ausbau_privat/img_arbeiten_regalsystem_560px.jpg" alt="Regalsystem"></a>
+    </div>
+
   </div>
-
-  <div class="project-title">Eleganz in Holz</div>
-  <div class="portfolio">
-    <a href="img/img_ausbau_privat/img_ausbau_2017_esstisch.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_esstisch.jpg" alt="Esstisch"></a>
-    <a href="img/img_ausbau_privat/img_ausbau_2017_kueche_2.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_kueche_2.jpg" alt="Küche 2"></a>
-    <a href="img/img_ausbau_privat/img_ausbau_2017_tv-ecke.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_tv-ecke.jpg" alt="TV Ecke"></a>
-    <a href="img/img_ausbau_privat/img_ausbau_2017_wintergarten.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_wintergarten.jpg" alt="Wintergarten"></a>
-    <a href="img/img_ausbau_privat/img_ausbau_2017_schlafzimmer.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_schlafzimmer.jpg" alt="Schlafzimmer"></a>
-    <a href="img/img_ausbau_privat/img_ausbau_2017_bad.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_bad.jpg" alt="Bad"></a>
-    <a href="img/img_ausbau_privat/img_ausbau_2017_schrank.jpg" class="glightbox" data-gallery="eleganz-holz"><img src="img/img_ausbau_privat/img_ausbau_2017_schrank.jpg" alt="Schrank"></a>
-  </div>
-
-  <div class="project-title">Maßgeschneiderte Raumlösungen</div>
-  <div class="portfolio">
-    <a href="img/img_ausbau_privat/img_gronau_kueche_3.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_3.jpg" alt="Küche 3"></a>
-    <a href="img/img_ausbau_privat/img_gronau_kueche_2.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_2.jpg" alt="Küche 2"></a>
-    <a href="img/img_ausbau_privat/img_gronau_treppe_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_1.jpg" alt="Treppe 1"></a>
-    <a href="img/img_ausbau_privat/img_gronau_treppe_2.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_2.jpg" alt="Treppe 2"></a>
-    <a href="img/img_ausbau_privat/img_gronau_tuer_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_tuer_1.jpg" alt="Tür 1"></a>
-    <a href="img/img_ausbau_privat/img_gronau_kueche_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_1.jpg" alt="Küche 1"></a>
-    <a href="img/img_ausbau_privat/img_gronau_treppe_kueche.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_kueche.jpg" alt="Treppe Küche"></a>
-  </div>
-
-  <div class="project-title">Brüderchen & Schwesterchen</div>
-  <div class="portfolio">
-    <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_2.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_2.jpg" alt="Kinderzimmer 2"></a>
-    <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_3.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_3.jpg" alt="Kinderzimmer 3"></a>
-    <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_0.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_0.jpg" alt="Kinderzimmer 0"></a>
-    <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_1.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_1.jpg" alt="Kinderzimmer 1"></a>
-  </div>
-
-  <div class="project-title">Schöner Arbeiten</div>
-  <div class="portfolio">
-    <a href="img/img_ausbau_privat/img_arbeiten_sitzecke_560px.jpg" class="glightbox" data-gallery="schoener-arbeiten"><img src="img/img_ausbau_privat/img_arbeiten_sitzecke_560px.jpg" alt="Sitzecke"></a>
-    <a href="img/img_ausbau_privat/img_arbeiten_regalsystem_560px.jpg" class="glightbox" data-gallery="schoener-arbeiten"><img src="img/img_ausbau_privat/img_arbeiten_regalsystem_560px.jpg" alt="Regalsystem"></a>
-  </div>
-
-</div>
+</main>
 
 <footer>
   <span>&copy; 2025 Schreinerei Lang</span> | 

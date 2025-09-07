@@ -16,14 +16,26 @@
 <link rel="apple-touch-icon" sizes="180x180" href="img/logo-favicon.png">
 
 <style>
-body {
+/* Flexbox Layout für Footer */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   font-family: 'Inter', sans-serif;
-  background-color: #f8f8f8;
+  background-color: #fdfcf9;
   color: #222;
-  padding-top: 80px;
-  padding-bottom: 80px; /* Höhe des Footers */
 }
 
+body {
+  padding-top: 80px; /* Navbar Höhe */
+}
+
+main {
+  flex: 1; /* Hauptinhalt füllt den verfügbaren Platz */
+}
+
+/* Navbar */
 .navbar {
   background-color: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
@@ -40,18 +52,15 @@ body {
   color: #b58846 !important;
   transform: scale(1.05);
 }
-
 .navbar-nav .nav-link.active {
-  color: #b58846 !important;   /* Gold */
+  color: #b58846 !important;
   font-weight: 600;
 }
-
 .navbar-brand img {
-  transition: transform 0.3s ease; /* sanfte Animation */
+  transition: transform 0.3s ease;
 }
-
 .navbar-brand img:hover {
-  transform: scale(1.1); /* 10% größer beim Hover */
+  transform: scale(1.1);
 }
 
 /* Hero */
@@ -62,8 +71,7 @@ body {
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 2rem; /* nur nach dem ersten Absatz Abstand */
-
+  margin-bottom: 2rem;
 }
 .hero p {
   font-size: 1.2rem;
@@ -88,7 +96,6 @@ body {
 .info-card:hover {
   transform: translateY(-5px) scale(1.02);
 }
-
 .info-card a {
   color: #222;
   text-decoration: none;
@@ -98,9 +105,9 @@ body {
   color: #b58846;
   transform: scale(1.05);
 }
-
 .info-card h4 {
-  margin-bottom: 1.5rem; /* mehr Abstand zur ersten Zeile */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 /* Buttons */
@@ -128,24 +135,17 @@ form .btn-gold {
 
 /* Footer */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
   color: #fff;
   background-color: #b58846;
-  z-index: 1000;
 }
-
 footer a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s, transform 0.3s;
 }
-
 footer a:hover {
   color: #222;
 }
@@ -154,7 +154,6 @@ footer a:hover {
   .hero h1 { font-size:2.8rem; }
   .hero p { font-size:1.1rem; }
 }
-
 </style>
 </head>
 
@@ -182,22 +181,19 @@ footer a:hover {
   </div>
 </nav>
 
-
-
-
-
+<main>
 <section class="hero">
   <h1>Kontakt</h1>
   <p>Wir freuen uns auf Ihre Nachricht oder Ihren Besuch.</p>
 </section>
 
 <section class="container my-5">
-  <div class="row g-4  justify-content-center">
+  <div class="row g-4 justify-content-center">
     <div class="col-md-7">
       <div class="info-card h-100">
         <h4>Schreinerei Lang</h4>
         <p>Innenarchitektur & Schreinerkunst</p>
-        <p><a href="https://maps.app.goo.gl/mFAcPZpkgbZByASS9"target="_blank">Zwickauer Straße 31, 08485 Lengenfeld</a></p>
+        <p><a href="https://maps.app.goo.gl/mFAcPZpkgbZByASS9" target="_blank">Zwickauer Straße 31, 08485 Lengenfeld</a></p>
         <p><a href="tel:0376063136">Tel: 037606 3136</a></p>
         <p><a href="mailto:info@schreinerei-lang.de">info@schreinerei-lang.de</a></p>
         <p><a href="https://www.instagram.com/rainer_lang/"><img src="img/img_kontakt/instagram.png" width="125" alt="Instagram"></a></p>
@@ -219,6 +215,7 @@ footer a:hover {
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <span>&copy; 2025 Schreinerei Lang</span> | 

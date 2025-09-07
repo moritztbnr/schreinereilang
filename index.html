@@ -16,14 +16,28 @@
 <link rel="apple-touch-icon" sizes="180x180" href="img/logo-favicon.png">
 
 <style>
-body {
+/* Grundlayout mit Flexbox */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
   font-family: 'Inter', sans-serif;
+  background-color: #fdfcf9;
   color: #222;
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
 
+body {
+  padding-top: 80px; /* Navbar Höhe */
+}
 
+main {
+  flex: 1; /* Hauptinhalt nimmt verfügbaren Platz ein */
+}
+
+/* Navbar */
 .navbar {
   background-color: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
@@ -41,11 +55,10 @@ body {
   transform: scale(1.05);
 }
 .navbar-brand img {
-  transition: transform 0.3s ease; /* sanfte Animation */
+  transition: transform 0.3s ease;
 }
-
 .navbar-brand img:hover {
-  transform: scale(1.1); /* 10% größer beim Hover */
+  transform: scale(1.1);
 }
 
 /* Hero */
@@ -57,7 +70,6 @@ body {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2rem;
-
 }
 .hero p {
   font-size: 1.2rem;
@@ -65,9 +77,7 @@ body {
   max-width: 1000px;
   margin: auto;
   margin-bottom: 2rem;
-
 }
-
 
 /* Info Cards */
 .info-section {
@@ -85,7 +95,6 @@ body {
 .info-card:hover {
   transform: translateY(-5px) scale(1.02);
 }
-
 .info-card a {
   color: #222;
   text-decoration: none;
@@ -95,9 +104,9 @@ body {
   color: #b58846;
   transform: scale(1.05);
 }
-
 .info-card h4 {
-  margin-bottom: 1.5rem; /* mehr Abstand zur ersten Zeile */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 /* Buttons */
@@ -125,24 +134,17 @@ form .btn-gold {
 
 /* Footer */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
   color: #fff;
   background-color: #b58846;
-  z-index: 1000;
 }
-
 footer a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s, transform 0.3s;
 }
-
 footer a:hover {
   color: #222;
 }
@@ -151,9 +153,6 @@ footer a:hover {
   .hero h1 { font-size:2.8rem; }
   .hero p { font-size:1.1rem; }
 }
-
-
-
 </style>
 </head>
 
@@ -170,7 +169,7 @@ footer a:hover {
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">        
-	<li class="nav-item"><a class="nav-link" href="leistungen.html">Leistungen</a></li>
+        <li class="nav-item"><a class="nav-link" href="leistungen.html">Leistungen</a></li>
         <li class="nav-item"><a class="nav-link" href="objekte_gewerbe.html">Objekte Gewerbe</a></li>
         <li class="nav-item"><a class="nav-link" href="ausbau_privat.html">Ausbau Privat</a></li>
         <li class="nav-item"><a class="nav-link" href="interieur_zuhause.html">Interieur Zuhause</a></li>
@@ -181,44 +180,42 @@ footer a:hover {
   </div>
 </nav>
 
+<main>
+  <section class="hero">
+    <h1>Exquisite Innenarchitektur & Schreinerkunst</h1>
+    <p>Wir verbinden Handwerk, Design und hochwertige Materialien für Gewerbe & Privat.</p>
+    <a href="leistungen.html" class="btn btn-gold">Unsere Arbeiten</a>
+  </section>
 
+  <section class="info-section container">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-7">
+        <div class="info-card text-center h-100">
+          <h4>Schreinerei Lang</h4>
+          <p>Innenarchitektur & Schreinerkunst</p>
+          <p><a href="https://maps.app.goo.gl/mFAcPZpkgbZByASS9" target="_blank">Zwickauer Straße 31, 08485 Lengenfeld</a></p>
+          <p><a href="tel:0376063136">Tel: 037606 3136</a></p>
+          <p><a href="mailto:info@schreinerei-lang.de">info@schreinerei-lang.de</a></p>
+          <p><a href="https://www.instagram.com/rainer_lang/"><img src="img/img_index/instagram.png" width="125" alt="Instagram"></a></p>
+        </div>
+      </div>
 
-
-
-<section class="hero">
-  <h1>Exquisite Innenarchitektur & Schreinerkunst</h1>
-  <p>Wir verbinden Handwerk, Design und hochwertige Materialien für Gewerbe & Privat.</p>
-  <a href="leistungen.html" class="btn btn-gold">Unsere Arbeiten</a>
-</section>
-
-<section class="info-section container">
-  <div class="row g-4 justify-content-center">
-    <div class="col-md-7">
-      <div class="info-card text-center h-100">
-        <h4>Schreinerei Lang</h4>
-        <p>Innenarchitektur & Schreinerkunst</p>
-        <p><a href="https://maps.app.goo.gl/mFAcPZpkgbZByASS9"target="_blank">Zwickauer Straße 31, 08485 Lengenfeld</a></p>
-        <p><a href="tel:0376063136">Tel: 037606 3136</a></p>
-        <p><a href="mailto:info@schreinerei-lang.de">info@schreinerei-lang.de</a></p>
-        <p><a href="https://www.instagram.com/rainer_lang/"><img src="img/img_index/instagram.png" width="125" alt="Instagram"></a></p>
+      <div class="col-md-5">
+        <div class="info-card text-center h-100">
+          <h4>Unsere Bereiche</h4>
+          <ul class="list-unstyled">
+            <p><a href="leistungen.html">Leistungen</a></p>
+            <p><a href="objekte_gewerbe.html">Objekte Gewerbe</a></p>
+            <p><a href="ausbau_privat.html">Ausbau Privat</a></p>
+            <p><a href="interieur_zuhause.html">Interieur Zuhause</a></p>
+            <p><a href="ueber_uns.html">Über uns</a></p>
+            <p><a href="kontakt.html">Kontakt</a></p>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <div class="col-md-5">
-      <div class="info-card text-center h-100">
-        <h4>Unsere Bereiche</h4>
-        <ul class="list-unstyled">
-          <p><a href="leistungen.html">Leistungen</a></p>
-          <p><a href="objekte_gewerbe.html">Objekte Gewerbe</a></p>
-          <p><a href="ausbau_privat.html">Ausbau Privat</a></p>
-          <p><a href="interieur_zuhause.html">Interieur Zuhause</a></p>
-          <p><a href="ueber_uns.html">Über uns</a></p>
-          <p><a href="kontakt.html">Kontakt</a></p>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer>
   <span>&copy; 2025 Schreinerei Lang</span> | 
@@ -227,10 +224,5 @@ footer a:hover {
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-
 </body>
 </html>

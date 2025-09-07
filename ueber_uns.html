@@ -16,13 +16,26 @@
 <link rel="apple-touch-icon" sizes="180x180" href="img/logo-favicon.png">
 
 <style>
-body {
+/* Flexbox Layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   font-family: 'Inter', sans-serif;
+  background-color: #fdfcf9;
   color: #222;
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
 
+body {
+  padding-top: 80px; /* Navbar Höhe */
+}
+
+main {
+  flex: 1; /* Hauptinhalt füllt den Platz */
+}
+
+/* Navbar */
 .navbar {
   background-color: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
@@ -39,18 +52,15 @@ body {
   color: #b58846 !important;
   transform: scale(1.05);
 }
-
 .navbar-nav .nav-link.active {
-  color: #b58846 !important;   /* Gold */
+  color: #b58846 !important;
   font-weight: 600;
 }
-
 .navbar-brand img {
-  transition: transform 0.3s ease; /* sanfte Animation */
+  transition: transform 0.3s ease;
 }
-
 .navbar-brand img:hover {
-  transform: scale(1.1); /* 10% größer beim Hover */
+  transform: scale(1.1);
 }
 
 /* Hero */
@@ -62,20 +72,16 @@ body {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2rem;
-
 }
 .hero p {
   font-size: 1.2rem;
   color: #555;
   max-width: 1000px;
   margin: auto;
-  margin-bottom: 0rem;
-
 }
 .hero p.first {
-  margin-bottom: 2rem; /* nur nach dem ersten Absatz Abstand */
+  margin-bottom: 2rem;
 }
-
 
 /* Info Cards */
 .info-section {
@@ -93,7 +99,6 @@ body {
 .info-card:hover {
   transform: translateY(-5px) scale(1.02);
 }
-
 .info-card a {
   color: #222;
   text-decoration: none;
@@ -103,54 +108,32 @@ body {
   color: #b58846;
   transform: scale(1.05);
 }
-
 .info-card h4 {
-  margin-bottom: 1.5rem; /* mehr Abstand zur ersten Zeile */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
-/* Buttons */
-.btn-gold {
-  background-color: #b58846;
-  color: #fff;
-  border-radius: 50px;
-  padding: 0.75rem 2rem;
-  font-weight: 500;
-  transition: background 0.3s, transform 0.3s;
-}
-.btn-gold:hover {
-  background-color: #a17638;
-  transform: scale(1.05);
-}
-
-/* Form */
-form .form-control {
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-form .btn-gold {
-  width: 100%;
+/* Team Bilder */
+.info-card img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Footer */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
   color: #fff;
   background-color: #b58846;
-  z-index: 1000;
 }
-
 footer a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s, transform 0.3s;
 }
-
 footer a:hover {
   color: #222;
 }
@@ -159,7 +142,6 @@ footer a:hover {
   .hero h1 { font-size:2.8rem; }
   .hero p { font-size:1.1rem; }
 }
-
 </style>
 </head>
 
@@ -176,7 +158,7 @@ footer a:hover {
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">        
-	<li class="nav-item"><a class="nav-link" href="leistungen.html">Leistungen</a></li>
+        <li class="nav-item"><a class="nav-link" href="leistungen.html">Leistungen</a></li>
         <li class="nav-item"><a class="nav-link" href="objekte_gewerbe.html">Objekte Gewerbe</a></li>
         <li class="nav-item"><a class="nav-link" href="ausbau_privat.html">Ausbau Privat</a></li>
         <li class="nav-item"><a class="nav-link" href="interieur_zuhause.html">Interieur Zuhause</a></li>
@@ -187,6 +169,7 @@ footer a:hover {
   </div>
 </nav>
 
+<main>
 <section class="hero">
   <h1>Über uns</h1>
   <p class="first">Die kleinen gediegenen Dinge machen den Unterschied.</p>
@@ -195,8 +178,7 @@ footer a:hover {
 </section>
 
 <section class="info-section container">
-  <div class="row g-4  justify-content-center">
-
+  <div class="row g-4 justify-content-center">
 
     <!-- Herkunft & Unternehmensgeschichte -->
     <div class="col-md-4">
@@ -264,10 +246,7 @@ footer a:hover {
 
   </div>
 </section>
-
-
-
-
+</main>
 
 <footer>
   <span>&copy; 2025 Schreinerei Lang</span> | 

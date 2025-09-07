@@ -19,14 +19,26 @@
 <link rel="apple-touch-icon" sizes="180x180" href="img/logo-favicon.png">
 
 <style>
-body {
+/* Flexbox Layout für Footer */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   font-family: 'Inter', sans-serif;
-  background-color: #f8f8f8;
+  background-color: #fdfcf9;
   color: #222;
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
 
+body {
+  padding-top: 80px; /* Navbar Höhe */
+}
+
+main {
+  flex: 1; /* Hauptinhalt füllt den verfügbaren Platz */
+}
+
+/* Navbar */
 .navbar {
   background-color: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
@@ -48,11 +60,10 @@ body {
   font-weight: 600;
 }
 .navbar-brand img {
-  transition: transform 0.3s ease; /* sanfte Animation */
+  transition: transform 0.3s ease;
 }
-
 .navbar-brand img:hover {
-  transform: scale(1.1); /* 10% größer beim Hover */
+  transform: scale(1.1);
 }
 
 /* Hero */
@@ -70,12 +81,12 @@ body {
   color: #555;
   max-width: 1000px;
   margin: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Info Cards */
 .info-section {
-  padding: 2rem;
+  padding: 1rem;
 }
 .info-card {
   background: rgba(255,255,255,0.2);
@@ -91,6 +102,7 @@ body {
 }
 .info-card h4 {
   margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 /* Bild + Text */
@@ -98,13 +110,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center; /* mittig */
+  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
-  text-align: center; /* Backup für inline-block */
+  text-align: center;
 }
 .text-image a {
-  display: inline-block; /* damit justify-content wirkt */
+  display: inline-block;
 }
 .text-image img {
   max-width: 100%;
@@ -115,7 +127,6 @@ body {
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-
 .text-image .text-content {
   flex: 2 1 400px;
 }
@@ -183,6 +194,7 @@ footer a:hover {
   </div>
 </nav>
 
+<main>
 <!-- Hero -->
 <section class="hero">
   <h1>Unsere Leistungen</h1>
@@ -237,6 +249,7 @@ footer a:hover {
   <div class="text-content">
   </div>
 </section>
+</main>
 
 <footer>
   <span>&copy; 2025 Schreinerei Lang</span> | 

@@ -19,14 +19,28 @@
 <link rel="apple-touch-icon" sizes="180x180" href="img/logo-favicon.png">
 
 <style>
-body {
+/* Flexbox Layout für Footer */
+html, body {
+  height: 100%;
+  margin: 0;
+  gap: 2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   font-family: 'Inter', sans-serif;
-  background-color: #f8f8f8;
+  background-color: #fdfcf9;
   color: #222;
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
 
+body {
+  padding-top: 80px; /* Navbar Höhe */
+}
+
+main {
+  flex: 1; /* Hauptinhalt füllt den verfügbaren Platz */
+}
+
+/* Navbar */
 .navbar {
   background-color: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
@@ -48,11 +62,10 @@ body {
   font-weight: 600;
 }
 .navbar-brand img {
-  transition: transform 0.3s ease; /* sanfte Animation */
+  transition: transform 0.3s ease;
 }
-
 .navbar-brand img:hover {
-  transform: scale(1.1); /* 10% größer beim Hover */
+  transform: scale(1.1);
 }
 
 /* Hero */
@@ -103,23 +116,17 @@ body {
 .project-title {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.5rem;
-  color: #b58846;
 }
 
 /* Footer */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
   color: #fff;
   background-color: #b58846;
-  z-index: 1000;
 }
 footer a {
   color: #fff;
@@ -133,6 +140,9 @@ footer a:hover {
 @media(max-width:768px){
   .hero h1 { font-size:2.8rem; }
   .hero p { font-size:1.1rem; }
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>
 </head>
@@ -161,6 +171,7 @@ footer a:hover {
   </div>
 </nav>
 
+<main>
 <section class="hero">
   <h1>Interieur Zuhause</h1>
   <p class="first">Ihr Augenblick – festgehalten in Möbeln, die Individualität und Stil in sich vereinen.</p>
@@ -210,6 +221,7 @@ footer a:hover {
   </div>
 
 </div>
+</main>
 
 <footer>
   <span>&copy; 2025 Schreinerei Lang</span> | 

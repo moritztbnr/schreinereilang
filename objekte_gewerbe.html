@@ -18,16 +18,28 @@
 <link rel="icon" href="img/logo-favicon.png" type="image/png">
 <link rel="apple-touch-icon" sizes="180x180" href="img/logo-favicon.png">
 
-
 <style>
-body {
+/* Flexbox Layout für Footer */
+html, body {
+  height: 100%;
+  margin: 0;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
   font-family: 'Inter', sans-serif;
-  background-color: #f8f8f8;
+  background-color: #fdfcf9;
   color: #222;
-  padding-top: 80px;
-  padding-bottom: 80px; /* Höhe des Footers */
 }
 
+body {
+  padding-top: 80px; /* Navbar Höhe */
+}
+
+main {
+  flex: 1; /* Hauptinhalt füllt den verfügbaren Platz */
+}
+
+/* Navbar */
 .navbar {
   background-color: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
@@ -44,27 +56,16 @@ body {
   color: #b58846 !important;
   transform: scale(1.05);
 }
-
 .navbar-nav .nav-link.active {
-  color: #b58846 !important;   /* Gold */
+  color: #b58846 !important;
   font-weight: 600;
 }
-
 .navbar-brand img {
-  transition: transform 0.3s ease; /* sanfte Animation */
+  transition: transform 0.3s ease;
 }
-
 .navbar-brand img:hover {
-  transform: scale(1.1); /* 10% größer beim Hover */
+  transform: scale(1.1);
 }
-.navbar-brand img {
-  transition: transform 0.3s ease; /* sanfte Animation */
-}
-
-.navbar-brand img:hover {
-  transform: scale(1.1); /* 10% größer beim Hover */
-}
-
 
 /* Hero */
 .hero {
@@ -75,7 +76,6 @@ body {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2rem;
-
 }
 .hero p {
   font-size: 1.2rem;
@@ -83,29 +83,25 @@ body {
   max-width: 1200px;
   margin: auto;
 }
-
 .hero p.first {
-  margin-bottom: 2rem; /* nur nach dem ersten Absatz Abstand */
+  margin-bottom: 2rem;
 }
-
 
 /* Portfolio Grid */
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Immer 4 Spalten */
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
-
 .portfolio img {
-  width: 100%;        /* Bild füllt die Spalte aus */
-  height: auto;       /* Höhe passt sich proportional an */
-  object-fit: contain; /* Bild bleibt vollständig sichtbar */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   border-radius: 12px;
 }
 .portfolio img.tall {
-  grid-row: span 2; /* das erste Bild doppelt so hoch */
+  grid-row: span 2;
 }
-
 .portfolio a img {
   transition: transform 0.3s ease;
 }
@@ -113,36 +109,27 @@ body {
   transform: scale(1.05);
 }
 
-
 /* Projekt Titel */
 .project-title {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.5rem;
-  color: #b58846;
 }
 
 /* Footer */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
   color: #fff;
   background-color: #b58846;
-  z-index: 1000;
 }
-
 footer a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s, transform 0.3s;
 }
-
 footer a:hover {
   color: #222;
 }
@@ -150,8 +137,10 @@ footer a:hover {
 @media(max-width:768px){
   .hero h1 { font-size:2.8rem; }
   .hero p { font-size:1.1rem; }
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
 </style>
 </head>
 
@@ -167,8 +156,8 @@ footer a:hover {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">        
-	<li class="nav-item"><a class="nav-link" href="leistungen.html">Leistungen</a></li>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="leistungen.html">Leistungen</a></li>
         <li class="nav-item"><a class="nav-link active" href="objekte_gewerbe.html">Objekte Gewerbe</a></li>
         <li class="nav-item"><a class="nav-link" href="ausbau_privat.html">Ausbau Privat</a></li>
         <li class="nav-item"><a class="nav-link" href="interieur_zuhause.html">Interieur Zuhause</a></li>
@@ -179,10 +168,7 @@ footer a:hover {
   </div>
 </nav>
 
-
-
-
-
+<main>
 <section class="hero">
   <h1>Objekte Gewerbe</h1>
   <p class="first">Stilsichere Gestaltung & solides Handwerk für Hotels, Bäckereien, Imbisse und Büros.</p>
@@ -211,6 +197,7 @@ footer a:hover {
     <a href="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_1.jpg" class="glightbox" data-gallery="fleischerei"><img src="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_1.jpg" alt="Theke"></a>
     <a href="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_6.jpg" class="glightbox" data-gallery="fleischerei"><img src="img/img_objekte_gewerbe/img_ausbau_fleischerei_imbiss_6.jpg" alt="Lounge"></a>
   </div>
+
 
   <div class="project-title">Berufsschule</div>
   <div class="portfolio">
@@ -243,6 +230,7 @@ footer a:hover {
   </div>
 
 </div>
+</main>
 
 <footer>
   <span>&copy; 2025 Schreinerei Lang</span> | 
@@ -259,7 +247,6 @@ footer a:hover {
     selector: '.glightbox'
   });
 </script>
-
 
 </body>
 </html>
