@@ -101,15 +101,29 @@ main {
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.portfolio img.talll {
-  grid-row: span 3;
-}
-.portfolio img.tall {
-  grid-row: span 2;
-}
+
 .portfolio a:hover img {
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+/* Bild, das 3 Reihen hoch sein soll */
+.portfolio .large {
+  grid-row: span 3; /* Nimmt 3 Reihen ein */
+}
+
+/* Optional: Höhe anpassen, falls du ein bestimmtes Seitenverhältnis willst */
+.portfolio .large img {
+  height: 100%;
+  object-fit: cover; /* oder contain, je nach Wunsch */
+}
+.portfolio .span-2-4 {
+  grid-row-start: 2; /* beginnt bei Zeile 2 */
+  grid-row-end: 4;   /* endet vor Zeile 4, also umfasst Zeile 2 */
+  grid-column-start: 3; /* beginnt bei Spalte 3 */
+  grid-column-end: 4;   /* endet vor Spalte 4, also umfasst Spalte 3 */
+
 }
 
 /* Projekt Titel */
@@ -137,6 +151,17 @@ footer a:hover {
   color: #222;
 }
 
+main {
+  flex: 1;
+  opacity: 0;
+  transform: translateY(40px) scale(0.98); /* leicht kleiner und verschoben */
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+main.show {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* Text „kommt nach vorne“ */
+}
 @media(max-width:768px){
   .hero h1 { font-size:2.8rem; }
   .hero p { font-size:1.1rem; }
@@ -183,19 +208,19 @@ footer a:hover {
 
   <div class="project-title">Täglicher Begleiter</div>
   <div class="portfolio">
-    <a href="img/img_interieur_zuhause/sekretaer-klassisch-2.jpg" class="glightbox" data-gallery="taeglicher-begleiter"><img src="img/img_interieur_zuhause/sekretaer-klassisch-2.jpg" alt="Sekretär 2"></a>
-    <a href="img/img_interieur_zuhause/sekretaer-klassisch-3.jpg" class="glightbox" data-gallery="taeglicher-begleiter"><img src="img/img_interieur_zuhause/sekretaer-klassisch-3.jpg" alt="Sekretär 3"></a>
-    <a href="img/img_interieur_zuhause/sekretaer-klassisch-4.jpg" class="glightbox" data-gallery="taeglicher-begleiter"><img src="img/img_interieur_zuhause/sekretaer-klassisch-4.jpg" alt="Sekretär 4"></a>
+    <a href="img/img_interieur_zuhause/sekretaer-klassisch-2.jpg" class="glightbox large" data-gallery="taeglicher-begleiter"><img src="img/img_interieur_zuhause/sekretaer-klassisch-2.jpg" alt="Sekretär 2"></a>
+    <a href="img/img_interieur_zuhause/sekretaer-klassisch-3.jpg" class="glightbox large" data-gallery="taeglicher-begleiter"><img src="img/img_interieur_zuhause/sekretaer-klassisch-3.jpg" alt="Sekretär 3"></a>
+    <a href="img/img_interieur_zuhause/sekretaer-klassisch-4.jpg" class="glightbox large" data-gallery="taeglicher-begleiter"><img src="img/img_interieur_zuhause/sekretaer-klassisch-4.jpg" alt="Sekretär 4"></a>
     <a href="img/img_interieur_zuhause/sekretaer-klassisch-1.jpg" class="glightbox" data-gallery="taeglicher-begleiter"><img src="img/img_interieur_zuhause/sekretaer-klassisch-1.jpg" alt="Sekretär 1"></a>
   </div>
 
   <div class="project-title">Goldquader</div>
   <div class="portfolio">
-    <a href="img/img_interieur_zuhause/goldkubus-6.jpg" class="glightbox" data-gallery="goldquader"><img src="img/img_interieur_zuhause/goldkubus-6.jpg" alt="Goldkubus 6" class="talll"></a>
-    <a href="img/img_interieur_zuhause/goldkubus-5.jpg" class="glightbox" data-gallery="goldquader"><img src="img/img_interieur_zuhause/goldkubus-5.jpg" alt="Goldkubus 5" class="talll"></a>
+    <a href="img/img_interieur_zuhause/goldkubus-6.jpg" class="glightbox large" data-gallery="goldquader"><img src="img/img_interieur_zuhause/goldkubus-6.jpg" alt="Goldkubus 6"></a>
+    <a href="img/img_interieur_zuhause/goldkubus-5.jpg" class="glightbox large" data-gallery="goldquader"><img src="img/img_interieur_zuhause/goldkubus-5.jpg" alt="Goldkubus 5"></a>
     <a href="img/img_interieur_zuhause/goldkubus-2.jpg" class="glightbox" data-gallery="goldquader"><img src="img/img_interieur_zuhause/goldkubus-2.jpg" alt="Goldkubus 2"></a>
     <a href="img/img_interieur_zuhause/goldkubus-1.jpg" class="glightbox" data-gallery="goldquader"><img src="img/img_interieur_zuhause/goldkubus-1.jpg" alt="Goldkubus 1"></a>
-    <a href="img/img_interieur_zuhause/goldkubus-3.jpg" class="glightbox" data-gallery="goldquader"><img src="img/img_interieur_zuhause/goldkubus-3.jpg" alt="Goldkubus 3" class="tall"></a>
+    <a href="img/img_interieur_zuhause/goldkubus-3.jpg" class="glightbox span-2-4" data-gallery="goldquader"><img src="img/img_interieur_zuhause/goldkubus-3.jpg" alt="Goldkubus 3"></a>
     <a href="img/img_interieur_zuhause/goldkubus-4.jpg" class="glightbox" data-gallery="goldquader"><img src="img/img_interieur_zuhause/goldkubus-4.jpg" alt="Goldkubus 4"></a>
   </div>
 
@@ -239,6 +264,14 @@ footer a:hover {
     selector: '.glightbox'
   });
 </script>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelector('main').classList.add('show');
+    }, 0); // 0 Sekunde warten
+  });
+</script>
+
 
 </body>
 </html>

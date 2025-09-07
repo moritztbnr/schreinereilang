@@ -139,6 +139,7 @@ footer {
   font-size: 0.9rem;
   color: #fff;
   background-color: #b58846;
+
 }
 footer a {
   color: #fff;
@@ -149,6 +150,41 @@ footer a:hover {
   color: #222;
 }
 
+/* Hintergrundbild als eigenes Layer */
+#bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/firma_werkstatt_atelier_rainer_lang.jpg') center center / cover no-repeat fixed;
+  z-index: ;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1.5s ease, transform 1.5s ease; /* Dauer + Effekt */
+}
+
+/* main (Text) */
+main {
+  flex: 1;
+  opacity: 0;
+  transform: translateY(40px) scale(0.98); /* leicht kleiner und verschoben */
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+main.show {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* Text „kommt nach vorne“ */
+}
+
+/* Fade/Scale-Effekt für Hintergrundbild */
+#bg-image.fade {
+  opacity: 0.3;
+  transform: scale(1.05); /* leicht vergrößert, wirkt wie nach hinten geschoben */
+}
+
+
+
 @media(max-width:768px){
   .hero h1 { font-size:2.8rem; }
   .hero p { font-size:1.1rem; }
@@ -157,6 +193,9 @@ footer a:hover {
 </head>
 
 <body>
+
+<div id="bg-image"></div>
+
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -224,5 +263,15 @@ footer a:hover {
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelector('main').classList.add('show');
+      document.getElementById('bg-image').classList.add('fade'); // Parallax-Effect
+    }, 750); // 0,75 Sekunden warten
+  });
+</script>
+
+
 </body>
 </html>

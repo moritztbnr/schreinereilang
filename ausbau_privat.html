@@ -101,13 +101,47 @@ main {
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.portfolio img.tall {
-  grid-row: span 2;
-}
+
 .portfolio a:hover img {
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
+
+
+.portfolio .span-2-3 {
+  grid-row-start: 2; /* beginnt bei Zeile 2 */
+  grid-row-end: 4;   /* endet vor Zeile 4, also umfasst Zeile 2 und 3 */
+}
+
+/* Optional: Höhe anpassen, falls du ein bestimmtes Seitenverhältnis willst */
+.portfolio .span-2-3 img {
+  height: 100%;
+  object-fit: cover; /* oder contain, je nach Wunsch */
+}
+
+.portfolio .span-3 {
+  grid-row-start: 3; /* beginnt bei Zeile 3 */
+  grid-row-end: 4;   /* endet vor Zeile 4, also umfasst Zeile 3 */
+}
+
+/* Bild, das 2 Reihen hoch sein soll */
+.portfolio .large {
+  grid-row: span 2; /* Nimmt 2 Reihen ein */
+}
+
+/* Optional: Höhe anpassen, falls du ein bestimmtes Seitenverhältnis willst */
+.portfolio .large img {
+  height: 100%;
+  object-fit: cover; /* oder contain, je nach Wunsch */
+}
+.portfolio .span-2 {
+  grid-row-start: 2; /* beginnt bei Zeile 2 */
+  grid-row-end: 3;   /* endet vor Zeile 3, also umfasst Zeile 2 */
+  grid-column-start: 3; /* beginnt bei Spalte 3 */
+  grid-column-end: 4;   /* endet vor Spalte 4, also umfasst Spalte 3 */
+
+}
+
 
 /* Projekt Titel */
 .project-title {
@@ -132,6 +166,18 @@ footer a {
 }
 footer a:hover {
   color: #222;
+}
+
+main {
+  flex: 1;
+  opacity: 0;
+  transform: translateY(40px) scale(0.98); /* leicht kleiner und verschoben */
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+main.show {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* Text „kommt nach vorne“ */
 }
 
 @media(max-width:768px){
@@ -204,18 +250,18 @@ footer a:hover {
       <a href="img/img_ausbau_privat/img_gronau_kueche_3.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_3.jpg" alt="Küche 3"></a>
       <a href="img/img_ausbau_privat/img_gronau_kueche_2.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_2.jpg" alt="Küche 2"></a>
       <a href="img/img_ausbau_privat/img_gronau_treppe_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_1.jpg" alt="Treppe 1"></a>
-      <a href="img/img_ausbau_privat/img_gronau_treppe_2.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_2.jpg" alt="Treppe 2"></a>
+      <a href="img/img_ausbau_privat/img_gronau_treppe_2.jpg" class="glightbox span-2-3" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_2.jpg" alt="Treppe 2"></a>
       <a href="img/img_ausbau_privat/img_gronau_tuer_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_tuer_1.jpg" alt="Tür 1"></a>
       <a href="img/img_ausbau_privat/img_gronau_kueche_1.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_kueche_1.jpg" alt="Küche 1"></a>
-      <a href="img/img_ausbau_privat/img_gronau_treppe_kueche.jpg" class="glightbox" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_kueche.jpg" alt="Treppe Küche"></a>
+      <a href="img/img_ausbau_privat/img_gronau_treppe_kueche.jpg" class="glightbox span-3" data-gallery="raumloesungen"><img src="img/img_ausbau_privat/img_gronau_treppe_kueche.jpg" alt="Treppe Küche"></a>
     </div>
 
     <div class="project-title">Brüderchen & Schwesterchen</div>
     <div class="portfolio">
-      <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_2.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_2.jpg" alt="Kinderzimmer 2"></a>
-      <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_3.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_3.jpg" alt="Kinderzimmer 3"></a>
+      <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_2.jpg" class="glightbox large" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_2.jpg" alt="Kinderzimmer 2"></a>
+      <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_3.jpg" class="glightbox large" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_3.jpg" alt="Kinderzimmer 3"></a>
       <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_0.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_0.jpg" alt="Kinderzimmer 0"></a>
-      <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_1.jpg" class="glightbox" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_1.jpg" alt="Kinderzimmer 1"></a>
+      <a href="img/img_ausbau_privat/img_gronau_kinderzimmer_1.jpg" class="glightbox span-2" data-gallery="kinderzimmer"><img src="img/img_ausbau_privat/img_gronau_kinderzimmer_1.jpg" alt="Kinderzimmer 1"></a>
     </div>
 
     <div class="project-title">Schöner Arbeiten</div>
@@ -244,5 +290,12 @@ footer a:hover {
   });
 </script>
 
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelector('main').classList.add('show');
+    }, 0); // 0 Sekunde warten
+  });
+</script>
 </body>
 </html>
